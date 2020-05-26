@@ -1,0 +1,72 @@
+{
+	"env": {
+		"es6": true,  // 全局环境支撑es6语法
+		"jquery": true,  // 允许使用jq变量
+		"browser": true,  // 允许使用浏览器变量
+		"node": true  // 允许Node变量
+	},
+	"parserOptions": {
+		// "sourceType": "module",
+		"ecmaVersion": 2017  // es版本为es2017
+	},
+	"rules": {
+		"semi": ["error", "always"], // 语句后加分号
+		"quotes": 2, // 字符串使用双引号
+		"no-unused-vars": 1, // 警告出现未使用过的变量 （编辑器会显示黄色提示，但是不影响正常编译）
+		// "no-use-before-define": 2, // 不允许在变量定义之前使用它们 
+		"for-direction": 2,  // for循环错误, 0=off,1=warn,2=error，下同
+		"no-cond-assign": 2,  // 禁止在条件语句中出现赋值操作符
+		"no-constant-condition": 2, // 禁止在条件中使用常量表达式
+		"no-dupe-args": 2, // 禁止在 function 定义中出现重复的参数
+		"no-dupe-keys": 2,  // 禁止在对象字面量中出现重复的键
+		"no-duplicate-case": 2,  // 禁止重复 case 标签
+		"no-empty": 2,  // 禁止空块语句
+		"no-ex-assign": 2, // 禁止对 catch 子句中的异常重新赋值
+		"no-extra-boolean-cast": 2,  // 禁止不必要的布尔类型转换
+		"no-func-assign": 2,  // 禁止对 function 声明重新赋值
+		"no-irregular-whitespace": 2,  // 禁止不规则的空白
+		"no-obj-calls": 2,  // 禁止将全局对象当作函数进行调用
+		"no-template-curly-in-string": 2,  // 禁止在常规字符串中出现模板字面量占位符语法
+		"no-unexpected-multiline": 2,  // 禁止使用令人困惑的多行表达式
+		"no-unreachable": 2,  // 禁止在 return、throw、continue 和 break 语句后出现不可达代码
+		"use-isnan": 2,  // 要求调用 isNaN()检查 NaN
+		"valid-typeof": 2,  // 强制 typeof 表达式与有效的字符串进行比较
+		"array-callback-return": 2,  // 强制数组方法的回调函数中有 return 语句
+		"curly": 2,  // 要求遵循大括号约定，在if等条件语句中，只有一句也需要强制使用大括号，增强可阅读性
+		"default-case": 2,  // 要求 Switch 语句中有 Default 分支
+		"eqeqeq": 2,  // 要求使用 === 和 !== 
+		"no-empty-function": 2, // 禁止出现空函数，可以在函数内写注释
+		"no-empty-pattern": 2, // 禁止使用空解构模式
+		"no-fallthrough": 2, // 禁止 case 语句落空
+		"no-loop-func": 2,  // 禁止循环中存在函数
+		"no-redeclare": 2, // 禁止重新声明变量
+		"no-self-assign": 2, // 禁止自身赋值
+		"no-undef": 2, // 禁用未声明的变量
+		"array-bracket-newline": ["error", "never"], // 在数组开括号后和闭括号,禁止在括号之间换行
+		"array-bracket-spacing": ["error", "never"], // 禁止在数组括号内出现空格，数组的[后和]前
+		"block-spacing": ["error", "never"],  // 禁止或强制在代码块中开括号前和闭括号后有空格
+		"brace-style": ["error", "1tbs", { "allowSingleLine": true }], // 大括号放在控制语句或声明语句同一行的位置，允许块的开括号和闭括号在 同一行
+		"camelcase": [2, {"properties": "never"}],  // 要求使用骆驼拼写法
+		"comma-dangle": ["error", "never"],  // 要求或禁止使用拖尾逗号
+		"comma-spacing": ["error", { "before": false, "after": true }],  // 禁止在逗号前用空格，逗号后必须要空格
+		"comma-style": ["error", "last"], // 逗号需要放在后面
+		"func-call-spacing": ["error", "never"],  // 禁止在函数名和开括号之间有空格
+		"indent": ["error", 4, {"SwitchCase": 1, "ArrayExpression": 1, "ObjectExpression": 1}],  // 缩进用4个空格
+		"key-spacing": 2, // 禁止在对象字面量的键和冒号之间存在空格，要求在对象字面量的冒号和值之间存在至少有一个空格
+		"keyword-spacing": ["error", {"before": true, "after": true}], // 要求在关键字之前和之后至少有一个空格
+		"lines-between-class-members": ["error", "always"], // 要求在类成员之间出现空行
+		"new-cap": 2, // 要求构造函数首字母大写
+		"no-lonely-if": 2, // 禁止 if 语句作为唯一语句出现在 else 语句块中
+		"no-mixed-spaces-and-tabs": 2,  // 禁止使用 空格 和 tab 混合缩进
+		"no-new-object": 2, // 禁止使用 Object 构造函数
+		"space-before-blocks": 2, // 要求语句块之前的空格
+		"space-before-function-paren": 2, // 要求函数圆括号之前有一个空格 
+		"space-in-parens": 2, // 禁止圆括号内左右两边没有空格
+		"space-infix-ops": 2, // 要求中缀操作符周围有空格
+		"space-unary-ops": 2, // 禁止在一元操作符之前或之后存在空格
+		"switch-colon-spacing": 2, // 强制在 switch 的冒号左有空格
+		"arrow-spacing": 2, // 要求箭头函数的箭头之前和之后有空格
+		"no-const-assign": 2, // 不允许改变用const声明的变量
+		"no-dupe-class-members": 2 // 不允许类成员中有重复的名称
+	}
+}

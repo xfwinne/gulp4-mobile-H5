@@ -1,0 +1,52 @@
+{
+  "name": "fast-build-demo",
+  "version": "1.0.0",
+  "description": "快速构建简单前端移动端模版",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev gulp dev",
+    "build": "cross-env NODE_ENV=prod gulp build",
+    "cssfix": "stylelint --fix ./src/style/**/*.scss",
+    "scriptfix": "eslint --fix ./src/script/es6/*.js"
+  },
+  "author": "winne",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.5",
+    "art-template": "^3.0.3",
+    "autoprefixer": "^9.5.0",
+    "cross-env": "^5.2.0",
+    "del": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.1.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-html-tpl": "^0.5.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.5.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "http-proxy-middleware": "^0.19.1",
+    "imagemin-pngquant": "^8.0.0",
+    "stylelint": "^9.10.1"
+  },
+  "browserslist": [
+    "last 4 versions",
+    "not ie <= 8",
+    "Android >= 4.0",
+    "ios > 7",
+    "ff >= 15"
+  ]
+}

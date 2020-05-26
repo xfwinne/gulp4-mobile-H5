@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <!-- 以当前IE浏览器所支持的最高版本模式来渲染页面，以chrome内核来渲染页面 -->    
+
+    <!-- 以下meta不需要响应式的删掉 start-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="wap-font-scale" content="no" /> <!-- 当页面有太多文字时禁止缩放 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="format-detection" content="telephone=no" /> <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+    <!-- 以下meta不需要响应式的删掉 end-->
+
+    <meta name="copyright" content="Copyright © 2016- 2020 sinyonet.com">
+    <meta name="author" content="深圳市心云科技有限公司 www.sinyonet.com">
+    <meta name="robots" content="all"> <!-- 这个网页可以被搜索引擎搜索到 -->
+    <meta name="keywords" content="网站关键字">
+    <meta name="description" content="百度快照说明文字">
+    <meta name="renderer" content="webkit"> <!-- 设置双核浏览器的浏览模式 -->
+
+    <title>{{title}}</title>
+
+    <!-- {{basePath}}后面的文件路径要写打包后生成的，而不是src中的文件路径 -->
+    <link rel="stylesheet" href="{{basePath}}css/core.min.css" />
+    <link rel="stylesheet" href="{{basePath}}css/style.css" />
+    <!-- <script src="{{basePath}}script/jquery.js"></script>
+    <script src="{{basePath}}script/core.js"></script> -->
+</head>
+
+<body>
+    {{if useHeader}}
+    <p>这里是if</p>
+    {{/if}} {{info}}
+
+    <template src="./header-nav.html"></template>

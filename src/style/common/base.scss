@@ -1,0 +1,223 @@
+@charset 'utf-8';
+
+/* CSS Document */
+ 
+//SCSS全局变量
+// // 默认iphone6设计稿宽度
+$baseDevice: 750;
+// 前端切图移动端默认正常显示尺寸，默认为设计稿的一半
+$device: $baseDevice / 2;
+// 默认html font-size 
+$baseFontSize: 100px;
+// scss function  
+@function calc-percent($target, $context) {
+    @return $target/$context * 100%;
+} 
+  
+@function px2rem($px, $base-font-size: $baseDevice / $device * $baseFontSize) {
+    // unitless() 函数只是用来判断一个值是否带有单位，如果不带单位返回的值为 true，带单位返回的值为 false
+    // unit() 函数主要是用来获取一个值所使用的单位，碰到复杂的计算时，其能根据运算得到一个“多单位组合”的值，不过只充许乘、除运算
+    @if (unitless($px)) { 
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return px2rem($px + 0px); // That may fail.
+    } 
+    @else if (unit($px)==rem) {
+        @return $px;  
+    }
+    @return ($px / $base-font-size) * 1rem;  
+} 
+  
+//透明
+@mixin touming($o: 70) {
+    opacity: $o/100;
+    -webkit-opacity: $o/100;  
+    filter: alpha(opacity=$o);
+}
+ 
+@mixin transition($time:.2s) {
+    -webkit-transition: $time ease all;
+    -moz-transition: $time ease all;
+    transition: $time ease all;
+}
+
+/* reset.css V1.6  Start*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+button,
+input,
+textarea,
+th,
+td {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i {
+    font: normal 12px BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+button,
+input,
+textarea {
+    font-size: 100%;
+    vertical-align: middle;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+div,
+a {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+    font-size: $baseFontSize;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: (320/$device) * $baseFontSize;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: (360/$device) * $baseFontSize;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    html {
+        font-size: (375/$device) * $baseFontSize;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: (480/$device) * $baseFontSize;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    html {
+        font-size: (640/$device) * $baseFontSize;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: (750/$device) * $baseFontSize;
+    }
+}
+
+.clearfloat:after {
+    font-size: 0;
+    display: block;
+    clear: both;
+    height: 0;
+    content: ' ';
+}
+
+.clearfloat {
+    *zoom: 1;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.wp {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.checkBrowser {
+    font-size: 14px;
+    line-height: 40px;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 50%;
+    width: 700px;
+    height: 40px;
+    margin-left: -360px;
+    padding: 0 10px;
+    color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #e6212a;
+    a {
+        font-size: 16px;
+        line-height: 20px;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        text-align: center;
+        color: #333;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+}
+
+
+/* reset.css V1.6  End */
+
+
